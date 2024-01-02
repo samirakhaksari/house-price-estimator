@@ -1,0 +1,231 @@
+body {
+    background-color: rgba(243, 232, 217);
+    padding: 30px;
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    body {
+        background-color: rgba(243, 232, 217);
+        padding: 30px;
+
+    }
+
+}
+
+@media (max-height: 500px) {
+    body {
+        background-color: rgba(243, 232, 217);
+        padding: 30px;
+
+    }
+
+}
+
+@media (min-width: 1201px) {
+    body {
+        background-color: rgba(243, 232, 217);
+        padding: 30px;
+
+    }
+
+}
+
+p.border-width-6 {
+    border-style: solid;
+    border-width: 1px;
+    color: rgba(176, 112, 81, 0.47);
+}
+
+hr {
+    border-top: 5px solid rgba(98, 77, 68, 0.3);
+
+}
+
+button.all-button {
+    background-color: #ff8935;
+    color: #000000;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+button.header-button {
+    background-color: #ff8935;
+    color: #000000;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: none;
+    float: right;
+    margin: 15px;
+}
+
+.header-text {
+
+    width: 300px;
+    height: 50px;
+    padding: 50px;
+    border-radius: 10px;
+
+}
+
+#navbar {
+    background: rgba(234, 198, 165, 0.58);
+    color: black;
+    overflow: auto;
+    border-radius: 10PX;
+    padding: 10px;
+
+}
+
+#navbar {
+    background: rgba(234, 198, 165, 0.58);
+    color: black;
+    overflow: auto;
+    border-radius: 10PX;
+    padding: 10px;
+
+}
+
+#navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+#navbar .logo {
+    float: left;
+    width: 317px;
+    height: 122px
+}
+
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: right;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    background: rgba(213, 185, 157, 0.58);
+    color: rgba(59, 54, 48, 0.98);
+    border-radius: 10px;
+}
+
+img.img-1 {
+    padding: 50px;
+    margin-top: 30px;
+    float: left;
+}
+
+img.header-img {
+    width: 255px;
+    height: 229px;
+    float: left;
+    padding-left: 105px;
+    padding-bottom: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input.text-box {
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    padding-right: 2px;
+    padding-left: 20px;
+
+
+}
+
+select.select-box {
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.center-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+
+table {
+    background: rgba(234, 198, 165, 0.58);
+    color: rgba(59, 54, 48, 0.98);
+    border-collapse: collapse;
+    width: 100%;
+    height: 50%;
+}
+
+table, th, td {
+    border: 5px solid rgba(59, 54, 48, 0.98);
+}
+
+.table_header {
+    text-align: center;
+    color: rgba(59, 54, 48, 0.98);
+    height: 100px;
+    width: 1700px;
+    background: rgba(234, 198, 165, 0.58);
+    margin-top: 100px;
+    border-radius: 30px;
+
+}
+
+.td_header {
+    margin: 0px;
+}
+
+.about-us-div {
+    background: rgba(234, 198, 165, 0.58);
+    overflow: auto;
+    border-radius: 10PX;
+    padding: 10px;
+}
+
+.about-us-img {
+    width: 100px;
+    height: 161px;
+    float: right;
+    padding-left: 105px;
+    padding-bottom: 10px;
+}
+
+.employees {
+    background: rgba(234, 198, 165, 0.58);
+    overflow: auto;
+    border-radius: 10PX;
+    padding: 10px;
+}
+.resume {
+    float: right;
+    overflow: auto;
+
+}

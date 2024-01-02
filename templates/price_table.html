@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir='rtl'>
+<head>
+    <title> MaskanFee </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../static/mobile.css">
+
+
+</head>
+
+
+<body>
+
+<header>
+    <p class="border-width-6"></p>
+    <nav id="navbar">
+
+
+        <div class='container'>
+            <img class="logo" src="/static/logo.png" alt="Photo" width="400" height="477">
+
+
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">ثبت نام</a></li>
+
+            </ul>
+
+            <button class="header-button" type="submit"> پیشبینی پیشرفته</button>
+            <div class="header-text">
+                <h3>این خونه چند می ارزه؟</h3>
+                <img class="header-img" src="/static/header.png" alt="Photo">
+
+            </div>
+
+
+        </div>
+
+
+    </nav>
+    <p class="border-width-6"></p>
+
+
+</header>
+
+
+<form action='#' method="post">
+    <img class="img-1" src="/static/Header-house.png" alt="Photo" width="400" height="477">
+
+    <p><strong>با یک کلیک،</strong><br>
+        <strong>ارزش واقعی خونه ای که میخوای بخری یا بفروشی رو به دست بیار!</strong></p>
+    <p class="border-width-6"></p>
+
+    <button class="all-button" type="button" onclick="location.href='#';">فروش</button>
+    <button class="all-button" type="button" onclick="location.href='/#';">رهن و اجاره</button>
+    <button class="all-button" type="button" onclick="location.href='/#';">تبدیل</button>
+    <br>
+    <br>
+    آدرس <input class="text-box" type="text" name="Address" placeholder="موقعیت مکانی خانه را وارد کنید" required/><br>
+    <br>
+    متراژ <input class="text-box" type="text" name="Area" placeholder="متراژ خانه را وارد کنید" required/><br>
+    <br>
+    سال ساخت <input class="text-box" type="text" name="building_year" placeholder="سال ساخت آپارتمان را وارد کنید"
+                    required/><br>
+    <br>
+    طبقه<input class="text-box" type="text" name="floor" placeholder="طبقه آپارتمان را وارد کنید" required/><br>
+    <br>
+    <br>
+    <label>نوع سند</label>
+    <select class="select-box" name="title_deeds" id="td">
+        <option value="سند شش دانگ">سند شش دانگ</option>
+        <option value="قولنامه ای">قولنامه ای</option>
+        <option value="اوقاف">اوقاف</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("td").selectedIndex = "-1";
+    </script>
+    <label> آسانسور</label>
+    <select class="select-box" name="elevator" id="el">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("el").selectedIndex = "-1";
+    </script>
+    <label> پارکینگ</label>
+    <select class="select-box" name="parking" id="pa">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("pa").selectedIndex = "-1";
+    </script>
+    <label>انباری</label>
+    <select class="select-box" name="store_room" id="sr">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("sr").selectedIndex = "-1";
+    </script>
+    <button class="all-button" type="submit">حساب کن!</button>
+    <p class="border-width-6"></p>
+
+    <h1 class="table_header"> تخمین قیمت منزل شما، با توجه به اطلاعات زیر انجام شد!</h1>
+
+
+    <div class="center-table">
+        <table border='1'>
+            <tr>
+                <td class="td_header"><h3>متراز:</h3></td>
+                <td class="td_header"><h3>محله: </h3></td>
+                <td class="td_header"><h3>طبقه:</h3></td>
+            </tr>
+            <tr>
+                <td><h3>قیمت تخمینی: </h3></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <p class="border-width-6"></p>
+    <nav id="navbar">
+
+
+        <div class='container'>
+            <img class="logo" src="/static/logo.png" alt="Photo" width="400" height="477">
+
+
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">ثبت نام</a></li>
+
+            </ul>
+
+
+        </div>
+
+
+    </nav>
+
+
+</form>
+</body>
+</html>
+
+
+

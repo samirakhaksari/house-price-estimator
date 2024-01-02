@@ -1,0 +1,36 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ارزشگذاری قیمت مسکن</title>
+    <meta name="description" content="ارزش گذاری قیمن مسکن">
+    <meta name="keywords" content="برآورد ,مسکن ,قیمت">
+</head>
+<body>
+<h1>سایت ارزش گذاری قیمت مسکن</h1>
+<a href="/register">ثبت نام</a>
+<form  method="post">
+ <img src="/house_image" alt="ارزش گذاری قیمت مسکن"><br>
+ <p> <strong>این خونه چند می ارزه؟</strong></p><hr>
+    <p>با یک کلیک،<br>
+    <strong>ارزش واقعی خونه ای که میخوای بخری یا بفروشی رو به دست بیار!</strong></p><hr>
+
+    <p><strong>اطلاعات مورد نظر را وارد نمایید</strong></p>
+
+
+    نوع معامله<input type="text" name="bargain_type" value="{{ t_bargain }}" required/><br>
+    نوع ملک<input type="text" name="house_type" value="{{ t_house }}" required/><br>
+    شهر<input type="text" name="city_id" value="{{ city }}" required/><br>
+    منطقه<input type="text" name="region_id" value="{{ region }}" required/><br>
+    مساحت آپارتمان<input type="number" name="area" value="{{ area }}" required/><br>
+    سال ساخت<input type="number" name="building_year" value="{{ building_year }}" required/><br>
+
+
+       <hr>
+     <strong> قیمت برآوردی<input type="text" name="price" value="{{ price }}" required/></strong><br><hr>
+
+   <button type="button" onclick="location.href='/';">بازگشت</button><br>ِ
+<a href="https://divar.ir/">به سایت دیوار هم سر بزن</a>
+</form>
+</body>
+</html>

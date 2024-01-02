@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir='rtl'>
+<head>
+    <title> MaskanFee </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../static/mobile.css">
+
+
+</head>
+
+
+<body>
+
+<header>
+    <p class="border-width-6"></p>
+    <nav id="navbar">
+
+
+        <div class='container'>
+            <img class="logo" src="/static/logo.png" alt="Photo" width="400" height="477">
+
+
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="/about_us">درباره ما</a></li>
+                <li><a href="#">ثبت نام</a></li>
+
+            </ul>
+
+            <button class="header-button" type="submit"> پیشبینی پیشرفته</button>
+            <div class="header-text">
+                <h3>این خونه چند می ارزه؟</h3>
+                <img class="header-img" src="/static/header.png" alt="Photo">
+
+            </div>
+
+
+        </div>
+
+
+    </nav>
+    <p class="border-width-6"></p>
+
+
+</header>
+
+
+<div >
+    <img class="img-1" src="/static/Header-house.png" alt="Photo" width="400" height="477">
+
+    <p><strong>با یک کلیک،</strong><br>
+        <strong>ارزش واقعی خونه ای که میخوای بخری یا بفروشی رو به دست بیار!</strong></p>
+    <p class="border-width-6"></p>
+
+    <button class="all-button" type="button" onclick="location.href='#';">فروش</button>
+    <button class="all-button" type="button" onclick="location.href='/#';">رهن و اجاره</button>
+    <button class="all-button" type="button" onclick="location.href='/#';">تبدیل</button>
+    <br>
+    <br>
+        <label>شهر</label>
+    <select name="city_id" id="cityId" onchange="reloadRegions()">
+
+         {% for City in city %}
+             <option value="{{ City.id }}">{{ City.name }} </option>
+         {% endfor %}
+
+    </select>
+    <br>
+   <label>منطقه</label>
+    <select name="region_id" id="regionId">
+
+         <option value=""> </option>
+
+    </select><br>
+    متراژ <input class="text-box" type="text" name="Area" id="area" placeholder="متراژ خانه را وارد کنید" required/><br>
+    <br>
+    سال ساخت <input class="text-box" type="text" name="building_year" id="buildingYear" placeholder="سال ساخت آپارتمان را وارد کنید"
+                    required/><br>
+    <br>
+    طبقه<input class="text-box" type="text" name="floor" id="floor" placeholder="طبقه آپارتمان را وارد کنید" required/><br>
+    <br>
+    <br>
+    <label>نوع سند</label>
+    <select class="select-box" name="title_deeds" id="titleDeeds">
+        <option value="سند شش دانگ">سند شش دانگ</option>
+        <option value="قولنامه ای">قولنامه ای</option>
+        <option value="اوقاف">اوقاف</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("titleDeeds").selectedIndex = "-1";
+    </script>
+    <label> آسانسور</label>
+    <select class="select-box" name="elevator" id="elevator">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("elevator").selectedIndex = "-1";
+    </script>
+    <label> پارکینگ</label>
+    <select class="select-box" name="parking" id="parking">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("parking").selectedIndex = "-1";
+    </script>
+    <label>انباری</label>
+    <select class="select-box" name="store_room" id="storeRoom">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br> <br>
+    <script>
+        document.getElementById("storeRoom").selectedIndex = "-1";
+    </script>
+    <button class="all-button" onclick="showPrice()">حساب کن!</button>
+<span id="resultPrice"></span>
+    <p class="border-width-6"></p>
+    <nav id="navbar">
+
+
+        <div class='container'>
+            <img class="logo" src="/static/logo.png" alt="Photo" width="400" height="477">
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">ثبت نام</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+</div>
+</body>
+<script>
+    function reloadRegions() {
+        const cityId = document.getElementById("cityId").value;
+        fetch("/api/regions?city_id=" + cityId).then((response) => {
+            response.json().then((regions) => {
+                let regionSelect = document.getElementById('regionId');
+                regionSelect.innerHTML = ''
+                regions.forEach((region) => {
+                    let option = document.createElement('option')
+                    option.value = region.id
+                    option.text = region.title
+                    regionSelect.appendChild(option)
+                })
+            })
+        })
+    }
+
+    function showPrice() {
+        let city_id = document.getElementById('cityId').value;
+        let region_id = document.getElementById('regionId').value;
+        let area = document.getElementById('area').value;
+        let building_year = document.getElementById('buildingYear').value;
+        let floor = document.getElementById('floor').value;
+        let title_deeds = document.getElementById('titleDeeds').value;
+        let elevator = document.getElementById('elevator').value;
+        let parking = document.getElementById('parking').value;
+        let store_room = document.getElementById('storeRoom').value;
+        fetch(`/api/calculate?city_id=${city_id}&region_id=${region_id}&area=${area}&building_year=${building_year}&floor=${floor}&title_deeds=${title_deeds}&elevator=${elevator}&parking=${parking}&store_room=${store_room}`).then((response) => {
+            response.json().then((responseJson) => {
+               document.getElementById('resultPrice').innerHTML = responseJson.price;
+            });
+        })
+    }
+    reloadRegions();
+</script>
+</html>

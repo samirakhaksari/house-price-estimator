@@ -1,0 +1,103 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>ارزشگذاری قیمت مسکن</title>
+    <meta name="description" content="ارزش گذاری قیمن مسکن">
+     <meta name="keywords" content="برآورد ,مسکن ,قیمت">
+</head>
+<body>
+<h1>سایت ارزش گذاری قیمت مسکن</h1>
+<a href="/register">ثبت نام</a>
+<form  action="house1" method="post" id="cit">
+ <img src="/house_image" alt="ارزش گذاری قیمت مسکن"><br>
+ <p> <strong>این خونه چند می ارزه؟</strong></p><hr>
+    <p>با یک کلیک،<br>
+    <strong>ارزش واقعی خونه ای که میخوای بخری یا بفروشی رو به دست بیار!</strong></p><hr>
+
+    <p><strong>اطلاعات مورد نظر را وارد نمایید</strong></p>
+   <label>نوع معامله</label>
+    <select name="bargain_type" id="bt" >
+        <option value="خرید و فروش">خرید و فروش</option>
+
+    </select><br/>
+    <script>
+        document.getElementById("bt").selectedIndex="-1";
+    </script>
+    <label>نوع ملک</label>
+    <select name="house_type" id="ht" >
+        <option value="آپارتمان">آپارتمان</option>
+        <option value="ویلایی">ویلایی</option>
+        <option value="زمین">زمین</option>
+    </select><br/>
+    <script>
+        document.getElementById("ht").selectedIndex="-1";
+    </script>
+    <label>شهر</label>
+    <select name="city_id" id="city" onchange="document.getElementById('cit').submit()">
+
+         {% for City in city %}
+             <option value="{{ City.name }}">{{ City.name }} </option>
+         {% endfor %}
+
+    </select>
+    <script>
+        document.getElementById("city").selectedIndex="-1";
+        document.getElementById("city").forms[0].submit()
+    </script><br>
+   <label>منطقه</label>
+    <select name="region_id" id="rgin">
+
+         <option value=""> </option>
+
+    </select>
+    <script>
+        document.getElementById("rgin").selectedIndex="-1";
+    </script><br>
+
+    مساحت آپارتمان<input type="number" name="area" placeholder="متراژ آپارتمان را وارد کنید" required /><br>
+    سال ساخت<input type="number" name="building_year" placeholder="سال ساخت آپارتمان را وارد کنید" required/><br>
+    <label>نوع سند</label>
+    <select name="title_deeds" id="td" disabled>
+        <option value="سند شش دانگ">سند شش دانگ</option>
+        <option value="قولنامه ای">قولنامه ای</option>
+        <option value="اوقاف">اوقاف</option>
+    </select><br/>
+    <script>
+        document.getElementById("td").selectedIndex="-1";
+    </script>
+    طبقه<input type="number" name="floor" placeholder="طبقه آپارتمان را وارد کنید" required disabled/><br>
+    تعداد واحد در طبقه<input type="number" name="unit_per_floor" placeholder="تعداد واحد در طبقه را وارد کنید" required disabled/><br>
+    تعداد کل واحدهای ساختمان<input type="number" name="total_unit" placeholder="تعداد کل واحدهای ساختمان را وارد کنید" required disabled/><br>
+    <label> آسانسور</label>
+    <select name="elevator" id="el" disabled>
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("el").selectedIndex="-1";
+    </script>
+    <label> پارکینگ</label>
+    <select name="parking" id="pa"  disabled>
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("pa").selectedIndex="-1";
+    </script>
+    <label>انباری</label>
+    <select name="store_room" id="sr"  disabled>
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("sr").selectedIndex="-1";
+    </script>
+
+
+<a href="https://divar.ir/">به سایت دیوار هم سر بزن</a>
+
+</form>
+</body>
+</html>

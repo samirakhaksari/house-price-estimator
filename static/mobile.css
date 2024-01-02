@@ -1,0 +1,42 @@
+@media (max-width: 500px) {
+    body {
+        background-color: rgba(243, 232, 217);
+        padding: 30px;
+
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    body {
+        background-color: rgba(243, 232, 217);
+        padding: 30px;
+
+    }
+
+}
+
+button.header-button {
+    background-color: #ff8935;
+    color: white;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: none;
+    float: none;
+}
+
+#navbar .logo {
+    float: none;
+    text-align: center;
+}
+
+#navbar ul , #navbar ul li{
+    float: none;
+
+}
+#navbar ul li a {
+    padding: 5px
+
+}

@@ -1,0 +1,90 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>سامانه تخمین قیمت مسکن</title>
+</head>
+<body>
+<a href="/register">ثبت نام</a>
+<form method="post">
+ <img src="/house_image"><br>
+ <p> <strong>این خونه چند می ارزه؟</strong></p><hr>
+    <p>با یک کلیک،<br>
+    <strong>ارزش واقعی خونه ای که میخوای بخری یا بفروشی رو به دست بیار!</strong></p>
+
+    <p><strong>اطلاعات مورد نظر را وارد نمایید</strong></p>
+   <label>نوع معامله</label>
+    <select name="bargain_type" id="bt" >
+        <option value="خرید و فروش">خرید و فروش</option>
+        <option value="رهن و اجاره">رهن و اجاره</option>
+    </select><br/>
+    <script>
+        document.getElementById("bt").selectedIndex="-1";
+    </script>
+    <label>نوع ملک</label>
+    <select name="house_type" id="ht" >
+        <option value="آپارتمان">آپارتمان</option>
+        <option value="ویلایی">ویلایی</option>
+        <option value="زمین">زمین</option>
+    </select><br/>
+    <script>
+        document.getElementById("ht").selectedIndex="-1";
+    </script>
+
+    شهر<input type="text" name="city_id" placeholder="نام شهر را وارد کنید" required/><br>
+    منطقه<input type="text" name="region_id" placeholder="نام منطقه را وارد کنید" required/><br>
+    مساحت آپارتمان<input type="number" name="area" placeholder="متراژ آپارتمان را وارد کنید" required/><br>
+مساحت زمین    <input type="number" name="land_area" placeholder="متراژ زمین را وارد کنید" required/><br>
+    مساحت زیر بنا<input type="number" name="Building_infrastructure" placeholder="متراژ زیر بنا را وارد کنید" required/><br>
+    سال ساخت<input type="number" name="building_year" placeholder="سال ساخت آپارتمان را وارد کنید" required/><br>
+    طبقه<input type="text" name="floor" placeholder="طبقه آپارتمان را وارد کنید" required/><br>
+    تعداد واحد در طبقه<input type="number" name="unit_per_floor" placeholder="تعداد واحد در طبقه را وارد کنید" required/><br>
+    تعداد کل واحدهای ساختمان<input type="number" name="total_unit" placeholder="تعداد کل واحدهای ساختمان را وارد کنید" required/><br>
+    <label>نوع سند</label>
+    <select name="title_deeds" id="td" >
+        <option value="سند شش دانگ">سند شش دانگ</option>
+        <option value="قولنامه ای">قولنامه ای</option>
+        <option value="اوقاف">اوقاف</option>
+    </select><br/>
+    <script>
+        document.getElementById("td").selectedIndex="-1";
+    </script>
+    <label> آسانسور</label>
+    <select name="elevator" id="el">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("el").selectedIndex="-1";
+    </script>
+    <label> پارکینگ</label>
+    <select name="parking" id="pa" >
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("pa").selectedIndex="-1";
+    </script>
+    <label>انباری</label>
+    <select name="store_room" id="sr">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("sr").selectedIndex="-1";
+    </script>
+    <label>بالکن</label>
+    <select name="balcony" id="bl">
+        <option value="دارد">دارد</option>
+        <option value="ندارد">ندارد</option>
+    </select><br/>
+    <script>
+        document.getElementById("bl").selectedIndex="-1";
+    </script><br/>
+
+
+    <button type="submit" onclick="location.href='/apartment_save';">حساب کن!</button><hr>
+
+</form>
+</body>
+</html>
